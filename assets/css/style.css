@@ -1,0 +1,102 @@
+/* Colors */
+:root {
+    --default-bg-color: #fefefe;
+    --backdrop-bg-color: #d9d9d9;
+    --title-bg-color: #f3f3f3;
+    --code-snippet-bg-color: #666666;
+    --borders: black;
+}
+
+/* Universal selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page style */
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: var(--default-bg-color);
+    min-width: 600px; /* This just happens to look bad under 600px */
+}
+
+/* Header h1 style */
+header h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Wrapper for the page except header and footer */
+.backdrop {
+    background-color: var(--backdrop-bg-color);
+    padding: 25px;
+}
+
+/* Introduction to page */
+#introduction {
+    display: flex;
+    justify-content: center;
+}
+
+/* Introduction text */
+#introduction p {
+    border: 3px solid var(--borders);
+    padding: 5px;
+}
+
+/* Articles section */
+#articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 5px 20px 5px;
+}
+
+/* Each article */
+#articles article {
+    width: 200px;
+    padding: 5px;
+}
+
+/* Title box within each article */
+#articles article .code-title {
+    width: 100px;
+    margin-left: 50px;
+    z-index: 999;
+    text-align: center;
+    background-color: var(--title-bg-color);
+    enable-background: new;
+    padding: 3px 1px 1px 1px;
+    border: 2px solid var(--borders);
+}
+
+/* Description within each article, overlaps behind title */
+#articles article .code-description {
+    width: 100%;
+    border: 2px solid var(--borders);
+    margin-top: -10px;
+    padding: 5px;
+    font-size:smaller;
+}
+
+/* Adds some space beneath the article description */
+#articles article .code-description p {
+    padding-bottom: 20px;
+}
+
+/* Code snippet within the description box */
+#articles article .code-snippet {
+    text-align: center;
+    background-color: var(--code-snippet-bg-color);
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid var(--borders);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    border: 3px solid var(--borders);
+}
