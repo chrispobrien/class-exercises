@@ -24,6 +24,8 @@ body {
 
 /* Header h1 style */
 header h1 {
+    border-top: 3px solid var(--borders);
+    border-bottom: 3px solid var(--borders);
     text-align: center;
     padding: 10px;
 }
@@ -58,6 +60,8 @@ header h1 {
 #articles article {
     width: 200px;
     padding: 5px;
+    margin: 20px;
+    height: 100px;
 }
 
 /* Title box within each article */
@@ -70,20 +74,23 @@ header h1 {
     enable-background: new;
     padding: 3px 1px 1px 1px;
     border: 2px solid var(--borders);
+    position: absolute;
 }
 
 /* Description within each article, overlaps behind title */
 #articles article .code-description {
-    width: 100%;
+    width: 200px;
     border: 2px solid var(--borders);
-    margin-top: -10px;
+    margin-top: 20px;
     padding: 5px;
     font-size:smaller;
+    position: absolute;
 }
 
 /* Adds some space beneath the article description */
 #articles article .code-description p {
     padding-bottom: 20px;
+    position: absolute;
 }
 
 /* Code snippet within the description box */
@@ -91,12 +98,13 @@ header h1 {
     text-align: center;
     background-color: var(--code-snippet-bg-color);
     padding: 10px;
-    margin: 5px;
+    margin: 40px 5px 5px 5px;
     border: 2px solid var(--borders);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    border: 3px solid var(--borders);
+    border-top: 3px solid var(--borders);
+    border-bottom: 3px solid var(--borders);
 }
